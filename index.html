@@ -3,8 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
@@ -16,47 +14,65 @@
     <title>Tip calculator app</title>
   </head>
   <body>
-    <main>
+    <div class="logo-container">
       <img src="images/logo.svg" alt="logo" />
-
-      <div class="container">
-        <div class="left-side">
-          <div class="amount-container">
-            <label for="amount">Bill</label>
-            <input type="text" id="amount" placeholder="0" />
+    </div>
+    <div class="container">
+      <div class="left-side">
+        <div class="left-side-container">
+          <div class="info">
+            <p class="bill">Bill</p>
+            <p class="error" id="bill-error">Can't be zero</p>
           </div>
-          <div class="tip">
-            <button class="5">5%</button>
-            <button class="10">10%</button>
-            <button class="15">15%</button>
-            <button class="25">25%</button>
-            <button class="50">50%</button>
-            <input type="text" id="custom-tip" placeholder="Custom" />
-          </div>
-          <div class="people">
-            <label for="number-of-people">Number of People</label>
-            <input type="text" id="number-of-people" placeholder="0" />
+          <input type="text" id="bill" placeholder="0" class="left-input" />
+        </div>
+        <div class="left-side-container">
+          <p>Select Tip %</p>
+          <div class="buttons-container">
+            <button class="button-percent" id="5">5%</button>
+            <button class="button-percent" id="10">10%</button>
+            <button class="button-percent" id="15">15%</button>
+            <button class="button-percent" id="25">25%</button>
+            <button class="button-percent" id="50">50%</button>
+            <input
+              class="custom-percent"
+              type="text"
+              id="custom-tip"
+              placeholder="Custom"
+            />
           </div>
         </div>
-
-        <div class="right-side">
-          <div class="per-person">
-            <div class="info-container">
-              <p class="big">Tip Amount</p>
-              <p class="small">/ person</p>
-            </div>
-            <p class="sum" id="tip-amount-per-person">$0.00</p>
+        <div class="left-side-container">
+          <div class="info">
+            <p class="people">Numer of People</p>
+            <p class="error" id="people-error">Can't be zero</p>
           </div>
-          <div class="per-person">
-            <div class="info-container">
-              <p class="big">Total</p>
-              <p class="small">/ person</p>
-            </div>
-            <p class="sum" id="total-per-person">$0.00</p>
-          </div>
-          <button id="reset-button">RESET</button>
+          <input
+            type="text"
+            id="number-of-people"
+            placeholder="0"
+            class="left-input"
+          />
         </div>
       </div>
-    </main>
+
+      <div class="right-side">
+        <div class="per-person">
+          <div class="info-container">
+            <p class="big">Tip Amount</p>
+            <p class="small">/ person</p>
+          </div>
+          <p class="sum" id="tip-amount-per-person">$0.00</p>
+        </div>
+        <div class="per-person">
+          <div class="info-container">
+            <p class="big">Total</p>
+            <p class="small">/ person</p>
+          </div>
+          <p class="sum" id="total-per-person">$0.00</p>
+        </div>
+        <button class="reset" id="reset-button">RESET</button>
+      </div>
+    </div>
   </body>
 </html>
