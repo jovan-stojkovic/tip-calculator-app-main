@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+    <title>Tip calculator app</title>
+  </head>
+  <body>
+    <main>
+      <img src="images/logo.svg" alt="logo" />
+
+      <div class="container">
+        <div class="left-side">
+          <div class="amount-container">
+            <label for="amount">Bill</label>
+            <input type="text" id="amount" placeholder="0" />
+          </div>
+          <div class="tip">
+            <button class="5">5%</button>
+            <button class="10">10%</button>
+            <button class="15">15%</button>
+            <button class="25">25%</button>
+            <button class="50">50%</button>
+            <input type="text" id="custom-tip" placeholder="Custom" />
+          </div>
+          <div class="people">
+            <label for="number-of-people">Number of People</label>
+            <input type="text" id="number-of-people" placeholder="0" />
+          </div>
+        </div>
+
+        <div class="right-side">
+          <div class="per-person">
+            <div class="info-container">
+              <p class="big">Tip Amount</p>
+              <p class="small">/ person</p>
+            </div>
+            <p class="sum" id="tip-amount-per-person">$0.00</p>
+          </div>
+          <div class="per-person">
+            <div class="info-container">
+              <p class="big">Total</p>
+              <p class="small">/ person</p>
+            </div>
+            <p class="sum" id="total-per-person">$0.00</p>
+          </div>
+          <button id="reset-button">RESET</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
