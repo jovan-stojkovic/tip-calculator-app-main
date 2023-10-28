@@ -22,21 +22,21 @@
         <div class="left-side-container">
           <div class="info">
             <p class="bill">Bill</p>
-            <p class="error" id="bill-error">Can't be zero</p>
+            <p class="error" id="bill-error"></p>
           </div>
-          <input type="text" id="bill" placeholder="0" class="left-input" />
+          <input type="number" id="bill" placeholder="0" value="" class="left-input" />
         </div>
         <div class="left-side-container">
           <p>Select Tip %</p>
           <div class="buttons-container">
-            <button class="button-percent" id="5">5%</button>
-            <button class="button-percent" id="10">10%</button>
-            <button class="button-percent" id="15">15%</button>
-            <button class="button-percent" id="25">25%</button>
-            <button class="button-percent" id="50">50%</button>
+            <button class="button-percent" id="tip5" data-percent="5" >5%</button>
+            <button class="button-percent" id="tip10" data-percent="10">10%</button>
+            <button class="button-percent" id="tip15" data-percent="15">15%</button>
+            <button class="button-percent" id="tip25" data-percent="25">25%</button>
+            <button class="button-percent" id="tip50" data-percent="50">50%</button>
             <input
               class="custom-percent"
-              type="text"
+              type="number"
               id="custom-tip"
               placeholder="Custom"
             />
@@ -45,10 +45,10 @@
         <div class="left-side-container">
           <div class="info">
             <p class="people">Numer of People</p>
-            <p class="error" id="people-error">Can't be zero</p>
+            <p class="error" id="people-error"></p>
           </div>
           <input
-            type="text"
+            type="number"
             id="number-of-people"
             placeholder="0"
             class="left-input"
@@ -71,8 +71,15 @@
           </div>
           <p class="sum" id="total-per-person">$0.00</p>
         </div>
-        <button class="reset" id="reset-button">RESET</button>
+        <button class="disabled" id="reset-button">RESET</button>
       </div>
     </div>
   </body>
 </html>
+
+
+
+
+<!-- maxlenth='10' -->
+
+<!-- not a placeholder -->

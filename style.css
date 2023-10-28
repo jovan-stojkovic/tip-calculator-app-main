@@ -73,6 +73,12 @@ p {
   gap: 20px;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .left-input {
   height: 60px;
   width: 500px;
@@ -190,7 +196,7 @@ input:hover {
     font-size: 50px;
 }
 
-.reset {
+.disabled {
     border: none;
     text-align: center;
     background-color: var(--Dark-grayish-cyan);
@@ -201,9 +207,21 @@ input:hover {
     border-radius: 5px;
 }
 
-.reset:hover {
-    cursor: not-allowed;;
+.disabled:hover {
+    cursor: not-allowed;
 }
 
+.enabled {
+  border: none;
+  text-align: center;
+  background-color: var(--Strong-cyan);
+  font-family: "Space Mono", monospace;
+  color: var(--Very-dark-cyan);
+  font-size: 22px;
+  height: 60px;
+  border-radius: 5px;
+}
 
-
+.enabled:hover {
+  cursor: pointer;
+}
