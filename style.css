@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
 
-/* font-family: 'Space Mono', monospace;
-- Font size (form inputs): 24px 
-- Weights: 700 */
-
 :root {
   --Strong-cyan: hsl(172, 67%, 45%);
   --Very-dark-cyan: hsl(183, 100%, 15%);
@@ -109,7 +105,6 @@ input::-webkit-inner-spin-button {
   background-position: 20px center;
 }
 
-
 input:hover {
   cursor: pointer;
 }
@@ -192,37 +187,37 @@ input:hover {
 }
 
 .per-person {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .big {
-    color: white;
+  color: white;
 }
 
 .small {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .sum {
-    color: var(--Strong-cyan);
-    font-size: 50px;
+  color: var(--Strong-cyan);
+  font-size: 50px;
 }
 
 .disabled {
-    border: none;
-    text-align: center;
-    background-color: var(--Dark-grayish-cyan);
-    font-family: "Space Mono", monospace;
-    color: var(--Very-dark-cyan);
-    font-size: 22px;
-    height: 60px;
-    border-radius: 5px;
+  border: none;
+  text-align: center;
+  background-color: var(--Dark-grayish-cyan);
+  font-family: "Space Mono", monospace;
+  color: var(--Very-dark-cyan);
+  font-size: 22px;
+  height: 60px;
+  border-radius: 5px;
 }
 
 .disabled:hover {
-    cursor: not-allowed;
+  cursor: not-allowed;
 }
 
 .enabled {
@@ -238,4 +233,60 @@ input:hover {
 
 .enabled:hover {
   cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .logo-container {
+    margin: 50px auto;
+  }
+
+  p {
+    font-size: 17px;
+  }
+
+  .container {
+    max-width: 550px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 40px;
+  }
+
+  .left-side {
+    width: 100%;
+  }
+
+  .left-side-container {
+    gap: 10px;
+    margin-bottom: 50px;
+  }
+
+  .buttons-container {
+    grid-template-columns: repeat(2, 48%);
+    gap: 20px;
+  }
+
+  .left-input {
+    width: 100%;
+    text-align: right;
+    font-size: 30px;
+  }
+
+  .info {
+    padding-right: 0;
+  }
+
+  /* RIGHT SIDE */
+
+  .right-side {
+    gap: 20px;
+    width: 100%;
+    padding: 40px;
+  }
+
+  .sum {
+    font-size: 45px;
+  }
 }
