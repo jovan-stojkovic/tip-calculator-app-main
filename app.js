@@ -35,12 +35,14 @@ function calculateSum() {
   if (!isNaN(billValue) && isNaN(peopleValue)) {
     resetButton.classList.add("enabled");
     resetButton.classList.remove("disabled");
+    numberOfPeopleInput.classList.add('input-error')
     peopleError.innerText = "Can't be zero";
   } else if (!isNaN(billValue) && !isNaN(peopleValue)) {
     const totalResult = (billValue / peopleValue).toFixed(2);
     const focusedButton = document.querySelector(".focused");
     totalPerPerson.innerText = `$${totalResult}`;
     peopleError.innerText = "";
+    numberOfPeopleInput.classList.remove('input-error')
     if (focusedButton) {
       const percent = parseFloat(focusedButton.getAttribute("data-percent"));
       const percentResult = ((billValue * percent) / 100 / peopleValue).toFixed(

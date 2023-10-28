@@ -138,6 +138,10 @@ input:hover {
   color: red;
 }
 
+.input-error {
+  border: solid 3px red;
+}
+
 .button-percent {
   border: none;
   border-radius: 5px;
