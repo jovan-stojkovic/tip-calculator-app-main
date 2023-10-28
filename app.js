@@ -15,9 +15,9 @@ const resetButton = document.querySelector("#reset-button");
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
-    calculateSum();
     buttons.forEach((btn) => btn.classList.remove("focused"));
     button.classList.add("focused");
+    calculateSum();
   });
 });
 
