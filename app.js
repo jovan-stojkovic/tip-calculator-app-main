@@ -28,22 +28,40 @@ numberOfPeopleInput.addEventListener("keyup", () => {
   calculateSum();
 });
 
+customTip.addEventListener("keyup", () => {
+  calculateSum();
+});
+
 function calculateSum() {
   const billValue = parseFloat(bill.value);
   const peopleValue = parseFloat(numberOfPeopleInput.value);
+  const customPercent = parseFloat(customTip.value);
 
   if (!isNaN(billValue) && isNaN(peopleValue)) {
     resetButton.classList.add("enabled");
     resetButton.classList.remove("disabled");
-    numberOfPeopleInput.classList.add('input-error')
+    numberOfPeopleInput.classList.add("input-error");
     peopleError.innerText = "Can't be zero";
+    console.log("prvi prosao");
   } else if (!isNaN(billValue) && !isNaN(peopleValue)) {
     const totalResult = (billValue / peopleValue).toFixed(2);
     const focusedButton = document.querySelector(".focused");
     totalPerPerson.innerText = `$${totalResult}`;
     peopleError.innerText = "";
-    numberOfPeopleInput.classList.remove('input-error')
-    if (focusedButton) {
+    numberOfPeopleInput.classList.remove("input-error");
+    console.log("drugi prosao");
+
+    if (!isNaN(customPercent)) {
+      const customPercentResult = (
+        (billValue * customPercent) /
+        100 /
+        peopleValue
+      ).toFixed(2);
+      tipAmountPerPerson.innerText = `$${customPercentResult}`;
+      totalPerPerson.innerText = `$${(
+        parseFloat(totalResult) + parseFloat(customPercentResult)
+      ).toFixed(2)}`;
+    } else if (focusedButton) {
       const percent = parseFloat(focusedButton.getAttribute("data-percent"));
       const percentResult = ((billValue * percent) / 100 / peopleValue).toFixed(
         2
